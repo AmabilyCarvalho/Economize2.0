@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Economize.CadastroPage"
+             BackgroundColor="#4A4A4A">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <!-- Profile Image -->
+        <Image Source="profile_placeholder.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center"/>
+        
+        <!-- Entry Fields -->
+        <Entry x:Name="NameEntry" Placeholder="Nome" Margin="10" />
+        <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" Margin="10" />
+        <Entry x:Name="PasswordEntry" Placeholder="Senha" IsPassword="True" Margin="10" />
+        <Entry x:Name="ConfirmPasswordEntry" Placeholder="confirmar senha" IsPassword="True" Margin="10" />
+        
+        <!-- Register Button -->
+        <Button Text="CADASTRAR" BackgroundColor="#C0C0C0" TextColor="Black" Margin="10" Clicked="OnRegisterButtonClicked"/>
+
+        <!-- Back Arrow -->
+        <ImageButton Source="back_arrow.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Start"/>
+    </StackLayout>
+</ContentPage>
