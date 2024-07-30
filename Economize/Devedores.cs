@@ -4,7 +4,6 @@ public class Devedores
     string nome;
      string Divida;
 
-    Int64 id;
     public void SetNome (string nome)
     {
         this.nome=nome;

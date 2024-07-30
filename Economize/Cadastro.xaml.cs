@@ -2,9 +2,9 @@ using Microsoft.Maui.Controls;
 
 namespace Economize
 {
-    public partial class CadastroPage : ContentPage
+    public partial class Cadastro : ContentPage
     {
-        public CadastroPage()
+        public Cadastro()
         {
             InitializeComponent();
         }
