@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Economize.AReceber"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="DarkGray">
+    
+    <Grid Padding="10">
+        <!-- Botão de navegação (Voltar) -->
+        <Button 
+            ImageSource="back_arrow.png"
+            BackgroundColor="Transparent"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            Clicked="OnBackClicked" />
+
+        <!-- Conteúdo principal -->
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+            
+            <!-- Botão "A Receber" -->
+            <Button Text="A RECEBER"
+                    BackgroundColor="LightGray"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    Margin="0,0,0,20"/>
+
+            <!-- Campos de entrada de texto -->
+            <Entry x:Name="Field1Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
+            <Entry x:Name="Field2Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
+            <Entry x:Name="Field3Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
+            <Entry x:Name="Field4Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
+            
+            <!-- Campo com botão de adição -->
+            <Grid Margin="0,5">
+                <Entry x:Name="Field5Entry" HorizontalOptions="FillAndExpand"/>
+                <Button Text="+" 
+                        BackgroundColor="LightGray"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        Clicked="OnAddClicked"/>
+            </Grid>
+        </StackLayout>
+        
+        <!-- Botões de Configuração e Exclusão -->
+        <StackLayout VerticalOptions="End" HorizontalOptions="End" Orientation="Horizontal" Spacing="10">
+            <Button ImageSource="settings_icon.png"
+                    BackgroundColor="Transparent"
+                    Clicked="OnSettingsClicked"/>
+            <Button ImageSource="delete_icon.png"
+                    BackgroundColor="Transparent"
+                    Clicked="OnDeleteClicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
