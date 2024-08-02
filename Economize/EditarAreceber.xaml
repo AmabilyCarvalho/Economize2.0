@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Economize.EditarAReceber"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="DarkGray">
+    
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+        <!-- Imagem no topo -->
+        <Image Source="package_hand.png" WidthRequest="100" HeightRequest="100" />
+
+        <!-- Título -->
+        <Label Text="Editar a receber"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               TextColor="Black"
+               Margin="0,20,0,10"/>
+
+        <!-- Campo Nome -->
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            <Label Text="Nome:" VerticalOptions="Center" TextColor="White" />
+            <Entry x:Name="NomeEntry" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <!-- Campo Data de Entrega -->
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            <Label Text="Data de Entrega:" VerticalOptions="Center" TextColor="White" />
+            <Entry x:Name="DataEntregaEntry" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <!-- Campo Valor da Compra -->
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            <Label Text="Valor da Compra:" VerticalOptions="Center" TextColor="White" />
+            <Entry x:Name="ValorCompraEntry" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <!-- Botões -->
+        <StackLayout Orientation="Horizontal" Margin="20,40,20,0">
+            <Button Text="Salvar" 
+                    BackgroundColor="LightGray"
+                    TextColor="Black"
+                    Clicked="OnSalvarClicked"/>
+            <Button Text="Cancelar" 
+                    BackgroundColor="LightGray"
+                    TextColor="Black"
+                    Margin="10,0,0,0"
+                    Clicked="OnCancelarClicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
