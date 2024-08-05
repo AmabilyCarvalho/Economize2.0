@@ -14,7 +14,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Image Source="crow.png"
+        <Image Source="corvo.png"
                Grid.Row="0"
                VerticalOptions="Center"
                HorizontalOptions="Center"
@@ -27,13 +27,13 @@
                VerticalOptions="Center"
                FontAttributes="Bold"
                FontSize="24"
-               TextColor="White" />
+               TextColor="Black" />
 
         <Label Text="Clique em um dos dois para continuar"
                Grid.Row="2"
                HorizontalOptions="Center"
                VerticalOptions="Center"
-               TextColor="White" />
+               TextColor="Black" />
 
         <StackLayout Grid.Row="3"
                      Orientation="Vertical"

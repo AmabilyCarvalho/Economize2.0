@@ -19,7 +19,7 @@ namespace Economize
             if (IsValidLogin(email, password))
             {
                 DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
-                // Navegar para a próxima página ou funcionalidade
+               Application.Current.MainPage = new TelaEscolhas();
             }
             else
             {

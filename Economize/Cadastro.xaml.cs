@@ -30,7 +30,7 @@ namespace Economize
                 return;
             }
 
-            // Continue with registration logic
+            Application.Current.MainPage = new TelaEscolhas();
             DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "OK");
         }
     }

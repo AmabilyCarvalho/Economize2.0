@@ -30,5 +30,10 @@ namespace Economize
         {
             // Lógica para o botão de exclusão
         }
+         private void OnBackButtonClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new TelaEscolhas();
+            Navigation.PopAsync();
+        }
     }
 }

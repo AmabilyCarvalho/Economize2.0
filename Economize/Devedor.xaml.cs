@@ -25,7 +25,7 @@ namespace Economize
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
-            // Navegar para a página anterior
+            Application.Current.MainPage = new TelaEscolhas();
             Navigation.PopAsync();
         }
 
@@ -39,5 +39,7 @@ namespace Economize
         {
             // Implementar funcionalidade de deletar (devedores, etc.)
         }
+
     }
+    
 }

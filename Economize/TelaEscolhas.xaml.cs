@@ -11,25 +11,25 @@ namespace Economize
 
         private void OnContasAPagarButtonClicked(object sender, EventArgs e)
         {
-            // Handle "Contas a Pagar" button click
+            Application.Current.MainPage = new Contas();
             DisplayAlert("Contas a Pagar", "Contas a Pagar button clicked", "OK");
         }
 
         private void OnDevedoresButtonClicked(object sender, EventArgs e)
         {
-            // Handle "Devedores" button click
+           Application.Current.MainPage = new Devedor();
             DisplayAlert("Devedores", "Devedores button clicked", "OK");
         }
 
         private void OnAReceberButtonClicked(object sender, EventArgs e)
         {
-            // Handle "A Receber" button click
+           Application.Current.MainPage = new AReceber();
             DisplayAlert("A Receber", "A Receber button clicked", "OK");
         }
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
-            // Handle back button click
+            Application.Current.MainPage = new TelaInicio();
             Navigation.PopAsync();
         }
     }
