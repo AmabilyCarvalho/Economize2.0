@@ -9,10 +9,10 @@ namespace Economize
             InitializeComponent();
         }
 
-        private async void OnBackClicked(object sender, EventArgs e)
+         private void OnBackButtonClicked(object sender, EventArgs e)
         {
-            // Lógica para o botão de voltar
-            await Navigation.PopAsync();
+            Application.Current.MainPage = new TelaEscolhas();
+            Navigation.PopAsync();
         }
 
         private void OnAddClicked(object sender, EventArgs e)

@@ -6,8 +6,13 @@
              BackgroundColor="#4A4A4A">
 
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <!-- Profile Image -->
-        <Image Source="profile_placeholder.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center"/>
+        
+        <Image Source="user.png" 
+               HeightRequest="100" 
+               WidthRequest="100" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Margin="0,0,0,20"/>
         
         <!-- Entry Fields -->
         <Entry x:Name="NameEntry" Placeholder="Nome" Margin="10" />
@@ -19,6 +24,16 @@
         <Button Text="CADASTRAR" BackgroundColor="#C0C0C0" TextColor="Black" Margin="10" Clicked="OnRegisterButtonClicked"/>
 
         <!-- Back Arrow -->
-        <ImageButton Source="back_arrow.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Start"/>
+        <Button Text="←"
+                Grid.Row="4"
+                VerticalOptions="End"
+                HorizontalOptions="Start"
+                BackgroundColor="Transparent"
+                TextColor="White"
+                Clicked="OnBackButtonClicked"
+                FontSize="30"
+                Margin="10,0,0,10"/>
+                
     </StackLayout>
+        
 </ContentPage>

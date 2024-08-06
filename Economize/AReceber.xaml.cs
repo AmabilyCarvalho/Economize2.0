@@ -11,7 +11,8 @@ namespace Economize
 
         private async void OnBackClicked(object sender, EventArgs e)
         {
-            // Lógica para o botão de voltar
+        
+            Application.Current.MainPage = new TelaEscolhas();
             await Navigation.PopAsync();
         }
 

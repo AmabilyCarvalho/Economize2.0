@@ -6,13 +6,6 @@
              BackgroundColor="DarkGray">
     
     <Grid Padding="10">
-        <!-- Botão de navegação (Voltar) -->
-        <Button 
-            ImageSource="back_arrow.png"
-            BackgroundColor="Transparent"
-            VerticalOptions="Start"
-            HorizontalOptions="Start"
-            Clicked="OnBackClicked" />
 
         <!-- Conteúdo principal -->
         <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
@@ -51,5 +44,15 @@
                     BackgroundColor="Transparent"
                     Clicked="OnDeleteClicked"/>
         </StackLayout>
+
+            <Button Text="←"
+                Grid.Row="4"
+                VerticalOptions="End"
+                HorizontalOptions="Start"
+                BackgroundColor="Transparent"
+                TextColor="White"
+                Clicked="OnBackButtonClicked"
+                FontSize="30"
+                Margin="10,0,0,10"/>
     </Grid>
 </ContentPage>
