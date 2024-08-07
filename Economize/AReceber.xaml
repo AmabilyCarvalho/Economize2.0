@@ -34,11 +34,7 @@
             <!-- Campo com botão de adição -->
             <Grid Margin="0,5">
                 <Entry x:Name="Field5Entry" HorizontalOptions="FillAndExpand"/>
-                <Button Text="+" 
-                        BackgroundColor="LightGray"
-                        HorizontalOptions="End"
-                        VerticalOptions="Center"
-                        Clicked="OnAddClicked"/>
+                
             </Grid>
         </StackLayout>
         

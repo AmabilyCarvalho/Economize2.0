@@ -23,16 +23,7 @@
             <Entry x:Name="Field2Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
             <Entry x:Name="Field3Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
             <Entry x:Name="Field4Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
-            
-            <!-- Campo com botão de adição -->
-            <Grid Margin="0,5">
-                <Entry x:Name="Field5Entry" HorizontalOptions="FillAndExpand"/>
-                <Button Text="+" 
-                        BackgroundColor="LightGray"
-                        HorizontalOptions="End"
-                        VerticalOptions="Center"
-                        Clicked="OnAddClicked"/>
-            </Grid>
+
         </StackLayout>
         
         <!-- Botões de Configuração e Exclusão -->

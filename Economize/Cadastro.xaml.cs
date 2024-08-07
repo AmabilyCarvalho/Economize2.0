@@ -31,7 +31,7 @@ namespace Economize
             }
 
             Application.Current.MainPage = new TelaEscolhas();
-            DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "OK");
+            //DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "OK");
         }
       private void OnBackButtonClicked(object sender, EventArgs e)
         {

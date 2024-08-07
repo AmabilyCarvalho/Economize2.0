@@ -40,8 +40,8 @@
                     Clicked="OnAReceberButtonClicked"/>
         </StackLayout>
 
-        <Image Source="crow.png"
-               Grid.Row="3"
+        <Image Source="corvo.png"
+               Grid.Row="4"
                VerticalOptions="End"
                HorizontalOptions="End"
                HeightRequest="200"

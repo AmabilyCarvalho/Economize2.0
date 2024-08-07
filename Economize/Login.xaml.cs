@@ -18,7 +18,7 @@ namespace Economize
             // Lógica de autenticação
             if (IsValidLogin(email, password))
             {
-                DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
+                //DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
                Application.Current.MainPage = new TelaEscolhas();
             }
             else

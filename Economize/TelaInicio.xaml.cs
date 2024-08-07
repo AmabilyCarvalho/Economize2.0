@@ -12,13 +12,13 @@ namespace Economize
         private void OnLoginButtonClicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new Login();
-            DisplayAlert("Login", "Login button clicked", "OK");
+            //DisplayAlert("Login", "Login button clicked", "OK");
         }
 
         private void OnRegisterButtonClicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new Cadastro();
-            DisplayAlert("Register", "Register button clicked", "OK");
+            //DisplayAlert("Register", "Register button clicked", "OK");
         }
     }
 }
