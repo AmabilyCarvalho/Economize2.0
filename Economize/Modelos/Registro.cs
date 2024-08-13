@@ -1,4 +1,4 @@
-namespace LiteDBExample.Modelos;
+namespace Economize.Modelos;
 
 public class Registro
 {

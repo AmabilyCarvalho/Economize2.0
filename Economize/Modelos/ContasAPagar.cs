@@ -1,5 +1,7 @@
+using Economize.Modelos;
+
 namespace Modelos;
-public class ContasAPagar:Cliente
+public class ContasAPagar
  {
      string Compra;
      string Divida;

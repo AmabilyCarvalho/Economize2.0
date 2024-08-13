@@ -4,9 +4,12 @@ namespace Economize
 {
     public partial class AReceber : ContentPage
     {
+        Controles.ClienteControle clienteControle = new Controles.ClienteControle();
+
         public AReceber()
         {
             InitializeComponent();
+        
         }
 
         private async void OnBackClicked(object sender, EventArgs e)
@@ -35,6 +38,11 @@ namespace Economize
         {
             Application.Current.MainPage = new TelaEscolhas();
             Navigation.PopAsync();
+        }
+         void Valor(object sender, SelectedItemChangedEventArgs e)
+        {
+            var page = new AReceber();
+            Application.Current.MainPage = page;
         }
     }
 }

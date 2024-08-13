@@ -1,26 +1,13 @@
-namespace Modelos;
-public class Cliente
+using LiteDB;
+
+namespace Economize.Modelos;
+
+public class Cliente : Registro
 {
-    string nome;
-    Int64 id;
-    public void SetNome (string nome)
-    {
-        this.nome=nome;
-    }
-    public string GetNome ()
-    {
-        return nome;
-    }
+  [BsonId]
+  public int Id { get; set; }
+  public string Nome { get; set; }
+  public string Sobrenome { get; set; }
 
-
-        string ID;
-    
-    public void SetID (string ID)
-    {
-        this.ID=ID;
-    }
-    public string GetID ()
-    {
-        return ID;
-    }
+  public string Telefone { get; set; }
 }

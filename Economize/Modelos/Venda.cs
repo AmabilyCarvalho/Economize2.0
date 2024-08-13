@@ -1,5 +1,5 @@
 namespace Modelos;
-public class Vendas:Cliente
+public class Vendas
 {
      string DataPedido;
      string Preço;

@@ -3,52 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Economize.AReceber"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="DarkGray">
-    
-    <Grid Padding="10">
-        <!-- Botão de navegação (Voltar) -->
-        <Button 
-            ImageSource="back_arrow.png"
-            BackgroundColor="Transparent"
-            VerticalOptions="Start"
-            HorizontalOptions="Start"
-            Clicked="OnBackClicked" />
+             BackgroundColor="#4D4D4D">
 
-        <!-- Conteúdo principal -->
-        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
-            
-            <!-- Botão "A Receber" -->
-            <Button Text="A RECEBER"
-                    BackgroundColor="LightGray"
-                    TextColor="Black"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Start"
-                    Margin="0,0,0,20"/>
+    <Grid RowSpacing="10" Padding="20">
 
-            <!-- Campos de entrada de texto -->
-            <Entry x:Name="Field1Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
-            <Entry x:Name="Field2Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
-            <Entry x:Name="Field3Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
-            <Entry x:Name="Field4Entry" HorizontalOptions="FillAndExpand" Margin="0,5"/>
+        <!-- Título -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" 
+                Grid.Column="0" 
+                Text="A Receber" 
+                TextColor="Black" 
+                BackgroundColor="White" 
+                HorizontalOptions="Center"
+                Margin="0,0,0,20"/>
+
+        <!-- Lista de campos de devedores -->
+        <StackLayout Grid.Row="1" Spacing="10">
+            <Entry Placeholder="Devedor 1" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Devedor 2" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Devedor 3" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Devedor 4" BackgroundColor="White" TextColor="Black"/>
             
-            <!-- Campo com botão de adição -->
-            <Grid Margin="0,5">
-                <Entry x:Name="Field5Entry" HorizontalOptions="FillAndExpand"/>
-                
-            </Grid>
         </StackLayout>
-        
-        <!-- Botões de Configuração e Exclusão -->
-        <StackLayout VerticalOptions="End" HorizontalOptions="End" Orientation="Horizontal" Spacing="10">
-            <Button ImageSource="settings_icon.png"
-                    BackgroundColor="Transparent"
-                    Clicked="OnSettingsClicked"/>
-            <Button ImageSource="delete_icon.png"
-                    BackgroundColor="Transparent"
-                    Clicked="OnDeleteClicked"/>
-        </StackLayout>
-        
-         <Button Text="←"
+
+        <!-- Botões inferiores -->
+        <Grid Grid.Row="2" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+        </Grid>
+        <Button Text="←"
                 Grid.Row="4"
                 VerticalOptions="End"
                 HorizontalOptions="Start"
@@ -58,4 +55,5 @@
                 FontSize="30"
                 Margin="10,0,0,10"/>
     </Grid>
+
 </ContentPage>
