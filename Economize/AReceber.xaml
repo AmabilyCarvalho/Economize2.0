@@ -28,10 +28,10 @@
 
         <!-- Lista de campos de devedores -->
         <StackLayout Grid.Row="1" Spacing="10">
-            <Entry Placeholder="Devedor 1" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 2" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 3" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 4" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="A Receber 1" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="A Receber 2" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="A Receber 3" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="A Receber 4" BackgroundColor="White" TextColor="Black"/>
             
         </StackLayout>
 
