@@ -1,3 +1,4 @@
+using Controles;
 using Microsoft.Maui.Controls;
 
 namespace Economize
@@ -9,12 +10,12 @@ namespace Economize
         public AReceber()
         {
             InitializeComponent();
-        
+
         }
 
         private async void OnBackClicked(object sender, EventArgs e)
         {
-        
+
             Application.Current.MainPage = new TelaEscolhas();
             await Navigation.PopAsync();
         }
@@ -34,15 +35,25 @@ namespace Economize
         {
             // Lógica para o botão de exclusão
         }
-         private void OnBackButtonClicked(object sender, EventArgs e)
+        private void OnBackButtonClicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new TelaEscolhas();
             Navigation.PopAsync();
         }
-         void Valor(object sender, SelectedItemChangedEventArgs e)
+        void Valor(object sender, SelectedItemChangedEventArgs e)
         {
             var page = new AReceber();
             Application.Current.MainPage = page;
+        }
+        private void BotaoSalvar(object sender, EventArgs e)
+        {
+           var cp = new ClienteControle();
+           cp.Compra = CompraEntry.Text;
+           cp.Divida = DividaEntry.Text;
+           cp.Fornecedor = FornecedorEntry.Text;
+           ClienteControle.CriarOuAtualizar(cp);
+           
+            await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
         }
     }
 }

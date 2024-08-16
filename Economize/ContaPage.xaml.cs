@@ -2,9 +2,9 @@ using Microsoft.Maui.Controls;
 
 namespace Economize
 {
-    public partial class Contas : ContentPage
+    public partial class ContaPage : ContentPage
     {
-        public Contas()
+        public ContaPage()
         {
             InitializeComponent();
         }
@@ -21,14 +21,9 @@ namespace Economize
             // Por exemplo, você pode adicionar o conteúdo do Field5Entry a uma lista
         }
 
-        private void OnSettingsClicked(object sender, EventArgs e)
+         private void BotaoSalvar(object sender, EventArgs e)
         {
-            // Lógica para o botão de configurações
-        }
-
-        private void OnDeleteClicked(object sender, EventArgs e)
-        {
-            // Lógica para o botão de exclusão
+            
         }
     }
 }

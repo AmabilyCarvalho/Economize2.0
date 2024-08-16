@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Economize.Devedor"
+             x:Class="Economize.ContaPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#4D4D4D">
 
@@ -20,7 +20,7 @@
 
         <Button Grid.Row="0" 
                 Grid.Column="0" 
-                Text="DEVEDORES" 
+                Text="Contas a pagar" 
                 TextColor="Black" 
                 BackgroundColor="White" 
                 HorizontalOptions="Center"
@@ -28,13 +28,13 @@
 
         <!-- Lista de campos de devedores -->
         <StackLayout Grid.Row="1" Spacing="10">
-            <Entry Placeholder="Devedor 1" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 2" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 3" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 4" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 5" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 6" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="Devedor 7" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Conta 1" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Conta 2" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Conta 3" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Conta 4" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Conta 5" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Conta 6" BackgroundColor="White" TextColor="Black"/>
+            <Entry Placeholder="Conta 7" BackgroundColor="White" TextColor="Black"/>
             
         </StackLayout>
 
@@ -48,8 +48,7 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="0" ImageSource="back_arrow.png" BackgroundColor="Transparent" Clicked="OnBackButtonClicked"/>
-            <Button Grid.Column="2" ImageSource="settings_icon.png" BackgroundColor="Transparent" Clicked="OnSettingsButtonClicked"/>
-            <Button Grid.Column="3" ImageSource="delete_icon.png" BackgroundColor="Transparent" Clicked="OnDeleteButtonClicked"/>
+           
         </Grid>
         <Button Text="←"
                 Grid.Row="4"
