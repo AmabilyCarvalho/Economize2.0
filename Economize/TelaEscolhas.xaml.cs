@@ -23,7 +23,7 @@ namespace Economize
 
         private void OnAReceberButtonClicked(object sender, EventArgs e)
         {
-           Application.Current.MainPage = new AReceber();
+           Application.Current.MainPage = new AReceberPage();
             //DisplayAlert("A Receber", "A Receber button clicked", "OK");
         }
 

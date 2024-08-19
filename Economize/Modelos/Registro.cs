@@ -1,6 +1,8 @@
-namespace Economize.Modelos;
-
-public class Registro
+namespace Economize.Modelos
 {
-  
+    public class Registro
+    {
+
+    }
 }
+

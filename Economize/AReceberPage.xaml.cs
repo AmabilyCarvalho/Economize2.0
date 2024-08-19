@@ -1,13 +1,15 @@
 using Controles;
 using Microsoft.Maui.Controls;
+using Economize.Modelos;
 
 namespace Economize
 {
-    public partial class AReceber : ContentPage
+    public partial class AReceberPage : ContentPage
     {
+        AReceberControle aReceberControle = new AReceberControle();
         Controles.ClienteControle clienteControle = new Controles.ClienteControle();
 
-        public AReceber()
+        public AReceberPage()
         {
             InitializeComponent();
 
@@ -40,20 +42,25 @@ namespace Economize
             Application.Current.MainPage = new TelaEscolhas();
             Navigation.PopAsync();
         }
-        void Valor(object sender, SelectedItemChangedEventArgs e)
-        {
-            var page = new AReceber();
-            Application.Current.MainPage = page;
-        }
         private void BotaoSalvar(object sender, EventArgs e)
         {
-           var cp = new ClienteControle();
-           cp.Compra = CompraEntry.Text;
-           cp.Divida = DividaEntry.Text;
-           cp.Fornecedor = FornecedorEntry.Text;
-           ClienteControle.CriarOuAtualizar(cp);
-           
-            await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
+            if (string.IsNullOrWhiteSpace(NomeEntry.Text) ||
+                 string.IsNullOrWhiteSpace(ValorDeCompraEntry.Text) ||
+                 string.IsNullOrWhiteSpace(DataDeEntregaEntry.Text) ||
+                 string.IsNullOrWhiteSpace(FornecedorEntry.Text)) ;
+
+            else
+            {
+                var c = new AReceber();
+                c.Nome = NomeEntry.Text;
+                c.ValorDeCompra = ValorDeCompraEntry.Text;
+                c.DataDeEntrega = DataDeEntregaEntry.Text;
+                c.Fornecedor = FornecedorEntry.Text;
+                aReceberControle.CriarOuAtualizar(c);
+
+            }
         }
     }
+
+   
 }
