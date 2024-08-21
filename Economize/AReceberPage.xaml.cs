@@ -58,9 +58,9 @@ namespace Economize
                 c.Fornecedor = FornecedorEntry.Text;
                 aReceberControle.CriarOuAtualizar(c);
 
+                
+
             }
         }
     }
-
-   
 }

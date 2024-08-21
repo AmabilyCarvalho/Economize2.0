@@ -1,39 +1,14 @@
-using Economize.Modelos;
-
-namespace Modelos;
-public class ContasAPagar
- {
-     string Compra;
-     string Divida;
-     string Fornecedor;
-
-    public void SetCompra (string Compra)
+namespace Economize.Modelos
+{
+    public class ContasAPagar : Registro
     {
-        this.Compra=Compra;
-    }
-    public string GetCompra ()
-    {
-        return Compra;
+
+        public int id { get; set; }
+        public string Compra { get; set; }
+        public string ValorDeCompra { get; set; }
+        public string Divida { get; set; }
+        public string Fornecedor { get; set; }
+        
     }
 
-
-    public void SetDivida (string Divida)
-    {
-        this.Divida=Divida;
-    }
-    public string GetDivida ()
-    {
-        return Divida;
-    }
-
-
-     public void SetFornecedor (string Fornecedor)
-    {
-        this.Fornecedor=Fornecedor;
-    }
-    public string GetFornecedor ()
-    {
-        return Fornecedor;
-    }
-
- }   
+}

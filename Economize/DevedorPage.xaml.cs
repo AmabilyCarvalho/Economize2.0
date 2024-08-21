@@ -1,11 +1,16 @@
 using System;
+using Controles;
+using Economize.Modelos;
 using Microsoft.Maui.Controls;
 
 namespace Economize
 {
-    public partial class Devedor : ContentPage
+
+    public partial class DevedorPage : ContentPage
     {
-        public Devedor()
+        DevedorControle devedorControle = new DevedorControle();
+        
+        public DevedorPage()
         {
             InitializeComponent();
         }
@@ -42,7 +47,19 @@ namespace Economize
 
         private void BotaoSalvar(object sender, EventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(NomeEntry.Text) ||
+                 string.IsNullOrWhiteSpace(ValorDividaEntry.Text)) ;
+
+            else
+            {
+                var c = new Devedor();
+                c.Nome = NomeEntry.Text;
+                c.ValorDivida = ValorDividaEntry.Text;
+                devedorControle.CriarOuAtualizar(c);
+
+                Application.Current.MainPage = new TelaEscolhas();
+
+            }
         }
 
     }

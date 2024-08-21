@@ -12,7 +12,7 @@ namespace Economize
         private void OnRegisterButtonClicked(object sender, EventArgs e)
         {
             // Logic for the register button click
-            string name = NameEntry.Text;
+            string name = NomeEntry.Text;
             string email = EmailEntry.Text;
             string password = PasswordEntry.Text;
             string confirmPassword = ConfirmPasswordEntry.Text;

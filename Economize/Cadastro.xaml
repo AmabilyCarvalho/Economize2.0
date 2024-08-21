@@ -15,7 +15,7 @@
                Margin="0,0,0,20"/>
         
         <!-- Entry Fields -->
-        <Entry x:Name="NameEntry" Placeholder="Nome" Margin="10" />
+        <Entry x:Name="NomeEntry" Placeholder="Nome" Margin="10" />
         <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" Margin="10" />
         <Entry x:Name="PasswordEntry" Placeholder="Senha" IsPassword="True" Margin="10" />
         <Entry x:Name="ConfirmPasswordEntry" Placeholder="confirmar senha" IsPassword="True" Margin="10" />

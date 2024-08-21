@@ -17,7 +17,7 @@ namespace Economize
 
         private void OnDevedoresButtonClicked(object sender, EventArgs e)
         {
-           Application.Current.MainPage = new Devedor();
+           Application.Current.MainPage = new DevedorPage();
             //DisplayAlert("Devedores", "Devedores button clicked", "OK");
         }
 

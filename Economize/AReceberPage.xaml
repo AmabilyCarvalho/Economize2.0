@@ -28,11 +28,10 @@
 
         <!-- Lista de campos de devedores -->
         <StackLayout Grid.Row="1" Spacing="10">
-            <Entry x:Name="NomeEntry" Placeholder="A Receber 1" BackgroundColor="White" TextColor="Black"/>
-            <Entry x:Name="ValorDeCompraEntry" Placeholder="A Receber 2" BackgroundColor="White" TextColor="Black"/>
-            <Entry x:Name="DataDeEntregaEntry" Placeholder="A Receber 3" BackgroundColor="White" TextColor="Black"/>
-            <Entry x:Name="FornecedorEntry" Placeholder="A Receber 4" BackgroundColor="White" TextColor="Black"/>
-            <Entry Placeholder="A Receber 5" BackgroundColor="White" TextColor="Black"/>
+            <Entry x:Name="NomeEntry" Placeholder="Nome" BackgroundColor="White" TextColor="Black"/>
+            <Entry x:Name="ValorDeCompraEntry" Placeholder="Valor da compra" BackgroundColor="White" TextColor="Black"/>
+            <Entry x:Name="DataDeEntregaEntry" Placeholder="Data de entrega" BackgroundColor="White" TextColor="Black"/>
+            <Entry x:Name="FornecedorEntry" Placeholder="Fornecedor" BackgroundColor="White" TextColor="Black"/>
             
         </StackLayout>
 
