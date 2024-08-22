@@ -33,5 +33,7 @@ namespace Economize
             // Navegar de volta ou realizar outra ação de cancelamento
             Navigation.PopAsync();
         }
+
+
     }
 }

@@ -46,7 +46,7 @@
                 TextColor="Black" 
                 BackgroundColor="White" 
                 Clicked="OnCancelButtonClicked" 
-                HorizontalOptions="Center"/>
+                HorizontalOptions="End"/>
     </StackLayout>
 
 </ContentPage>
