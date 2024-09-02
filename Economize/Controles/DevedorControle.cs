@@ -37,10 +37,10 @@ public class DevedorControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Devedor devedor)
+  public virtual void CriarOuAtualizar(Devedor d)
   {
     var collection = liteDB.GetCollection<Devedor>(NomeDaTabela);
-    collection.Upsert(devedor);
+    collection.Upsert(d);
   }
 
   //----------------------------------------------------------------------------

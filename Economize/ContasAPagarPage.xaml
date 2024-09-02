@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Economize.ContaPage"
+             x:Class="Economize.ContasAPagarPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#4D4D4D">
 
@@ -10,6 +10,7 @@
         <!-- Título -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
@@ -30,7 +31,6 @@
         <StackLayout Grid.Row="1" Spacing="10">
             <Entry x:Name="CompraEntry" Placeholder="Compra" BackgroundColor="White" TextColor="Black"/>
             <Entry x:Name="ValorDeCompraEntry" Placeholder="Valor da compra" BackgroundColor="White" TextColor="Black"/>
-            <Entry x:Name="DividaEntry" Placeholder="Divida" BackgroundColor="White" TextColor="Black"/>
             <Entry x:Name="FornecedorEntry" Placeholder="Fornecedor" BackgroundColor="White" TextColor="Black"/>
             
         </StackLayout>
@@ -66,6 +66,15 @@
                 Clicked="BotaoSalvar"
                 FontSize="20"
                 Margin="10,0,0,10"/>
+
+                <Button Text="Lista"
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                TextColor="Black"
+                Clicked="BotaoLista"
+                FontSize="20"
+                Margin="10,200,0,10"/>
     </Grid>
 
 </ContentPage>

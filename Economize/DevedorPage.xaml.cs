@@ -8,7 +8,8 @@ namespace Economize
 
     public partial class DevedorPage : ContentPage
     {
-        DevedorControle devedorControle = new DevedorControle();
+        Controles.DevedorControle devedorControle = new Controles.DevedorControle();
+        public Devedor devedor { get; set; }
         
         public DevedorPage()
         {
@@ -28,16 +29,31 @@ namespace Economize
             //(Content as Grid).Children[1].Add(newDebtorEntry);
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (devedor != null)
+            {
+               NomeEntry.Text = devedor.Nome;
+               ValorDividaEntry.Text = devedor.ValorDivida;
+            }
+        }
+
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new TelaEscolhas();
             Navigation.PopAsync();
         }
 
+         private void BotaoLista(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new ListaDevedor();
+        }
+
         private void OnSettingsButtonClicked(object sender, EventArgs e)
         {
-            // Navegar para a página de configurações
-            // Navigation.PushAsync(new SettingsPage());
+
         }
 
         private void OnDeleteButtonClicked(object sender, EventArgs e)
@@ -52,10 +68,10 @@ namespace Economize
 
             else
             {
-                var c = new Devedor();
-                c.Nome = NomeEntry.Text;
-                c.ValorDivida = ValorDividaEntry.Text;
-                devedorControle.CriarOuAtualizar(c);
+                var d = new Devedor();
+                d.Nome = NomeEntry.Text;
+                d.ValorDivida = ValorDividaEntry.Text;
+                devedorControle.CriarOuAtualizar(d);
 
                 Application.Current.MainPage = new TelaEscolhas();
 

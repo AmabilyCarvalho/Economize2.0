@@ -37,10 +37,10 @@ public class ContasAPagarControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(ContasAPagar contasAPagar)
+  public virtual void CriarOuAtualizar(ContasAPagar c)
   {
     var collection = liteDB.GetCollection<ContasAPagar>(NomeDaTabela);
-    collection.Upsert(contasAPagar);
+    collection.Upsert(c);
   }
 
   //----------------------------------------------------------------------------

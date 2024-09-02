@@ -11,7 +11,7 @@ namespace Economize
 
         private void OnContasAPagarButtonClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new ContaPage();
+            Application.Current.MainPage = new ContasAPagarPage();
             //DisplayAlert("Contas a Pagar", "Contas a Pagar button clicked", "OK");
         }
 

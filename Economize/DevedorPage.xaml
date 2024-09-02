@@ -5,85 +5,88 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#4D4D4D">
 
-    <Grid RowSpacing="10"
-            Padding="20">
+        <Grid RowSpacing="10"
+              Padding="20">
 
-        <!-- Título -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+                <!-- Título -->
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="0"
-                Grid.Column="0"
-                Text="DEVEDORES"
-                TextColor="Black"
-                BackgroundColor="White"
-                HorizontalOptions="Center"
-                Margin="0,0,0,20"/>
+                <Button Grid.Row="0"
+                        Grid.Column="0"
+                        Text="DEVEDORES"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        HorizontalOptions="Center"
+                        Margin="0,0,0,20"/>
 
-        <!-- Lista de campos de devedores -->
-        <StackLayout Grid.Row="1"
-                Spacing="10">
-            <Entry x:Name="NomeEntry"
-                    Placeholder="Nome"
-                    BackgroundColor="White"
-                    TextColor="Black"/>
-            <Entry x:Name="ValorDividaEntry"
-                    Placeholder="Valor da divida"
-                    BackgroundColor="White"
-                    TextColor="Black"/>
+                <!-- Lista de campos de devedores -->
+                <StackLayout Grid.Row="1"
+                             Spacing="10">
+                        <Entry x:Name="NomeEntry"
+                               Placeholder="Nome"
+                               BackgroundColor="White"
+                               TextColor="Black"/>
+                        <Entry x:Name="ValorDividaEntry"
+                               Placeholder="Valor da divida"
+                               BackgroundColor="White"
+                               TextColor="Black"/>
 
 
-        </StackLayout>
+                </StackLayout>
 
-        <!-- Botões inferiores -->
-        <Grid Grid.Row="2"
-                ColumnSpacing="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                <!-- Botões inferiores -->
+                <Grid Grid.Row="2"
+                      ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0"
-                    ImageSource="back_arrow.png"
-                    BackgroundColor="Transparent"
-                    Clicked="OnBackButtonClicked"/>
-            <Button Grid.Column="2"
-                    ImageSource="settings_icon.png"
-                    BackgroundColor="Transparent"
-                    Clicked="OnSettingsButtonClicked"/>
-            <Button Grid.Column="3"
-                    ImageSource="delete_icon.png"
-                    BackgroundColor="Transparent"
-                    Clicked="OnDeleteButtonClicked"/>
+                        <Button Grid.Column="0"
+                                ImageSource="back_arrow.png"
+                                BackgroundColor="Transparent"
+                                Clicked="OnBackButtonClicked"/>
+                        <Button Grid.Column="2"
+                                ImageSource="settings_icon.png"
+                                BackgroundColor="Transparent"
+                                Clicked="OnSettingsButtonClicked"/>
+                        <Button Grid.Column="3"
+                                ImageSource="delete_icon.png"
+                                BackgroundColor="Transparent"
+                                Clicked="OnDeleteButtonClicked"/>
+                </Grid>
+                <Button Text="←"
+                        Grid.Row="4"
+                        VerticalOptions="End"
+                        HorizontalOptions="Start"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        Clicked="OnBackButtonClicked"
+                        FontSize="30"
+                        Margin="10,0,0,10"/>
+
+
+                <Button Text="Salvar"
+                        Grid.Row="3"
+                        HorizontalOptions="Center"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        Clicked="BotaoSalvar"
+                        FontSize="20"
+                        Margin="10,0,0,10"/>
+
+
         </Grid>
-        <Button Text="←"
-                Grid.Row="4"
-                VerticalOptions="End"
-                HorizontalOptions="Start"
-                BackgroundColor="Transparent"
-                TextColor="White"
-                Clicked="OnBackButtonClicked"
-                FontSize="30"
-                Margin="10,0,0,10"/>
 
-
-        <Button Text="Salvar"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                BackgroundColor="White"
-                TextColor="Black"
-                Clicked="BotaoSalvar"
-                FontSize="20"
-                Margin="10,0,0,10"/>
-    </Grid>
 
 </ContentPage>
