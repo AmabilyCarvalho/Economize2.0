@@ -6,8 +6,8 @@ namespace Economize
 {
     public partial class AReceberPage : ContentPage
     {
-        AReceberControle aReceberControle = new AReceberControle();
-        Controles.ClienteControle clienteControle = new Controles.ClienteControle();
+        Controles.AReceberControle aReceberControle = new Controles.AReceberControle();
+        public AReceber aReceber { get; set; }
 
         public AReceberPage()
         {
@@ -33,6 +33,11 @@ namespace Economize
             // Lógica para o botão de configurações
         }
 
+        private void BotaoLista(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new ListaAReceber();
+        }
+
         private void OnDeleteClicked(object sender, EventArgs e)
         {
             // Lógica para o botão de exclusão
@@ -41,6 +46,19 @@ namespace Economize
         {
             Application.Current.MainPage = new TelaEscolhas();
             Navigation.PopAsync();
+        }
+
+         protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (aReceber != null)
+            {
+               NomeEntry.Text = aReceber.Nome;
+               ValorDeCompraEntry.Text = aReceber.ValorDeCompra;
+               DataDeEntregaEntry.Text = aReceber.DataDeEntrega;
+               FornecedorEntry.Text = aReceber.Fornecedor;
+            }
         }
         private void BotaoSalvar(object sender, EventArgs e)
         {
@@ -51,12 +69,12 @@ namespace Economize
 
             else
             {
-                var c = new AReceber();
-                c.Nome = NomeEntry.Text;
-                c.ValorDeCompra = ValorDeCompraEntry.Text;
-                c.DataDeEntrega = DataDeEntregaEntry.Text;
-                c.Fornecedor = FornecedorEntry.Text;
-                aReceberControle.CriarOuAtualizar(c);
+                var a = new AReceber();
+                a.Nome = NomeEntry.Text;
+                a.ValorDeCompra = ValorDeCompraEntry.Text;
+                a.DataDeEntrega = DataDeEntregaEntry.Text;
+                a.Fornecedor = FornecedorEntry.Text;
+                aReceberControle.CriarOuAtualizar(a);
 
                 
 

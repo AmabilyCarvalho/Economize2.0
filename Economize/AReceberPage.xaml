@@ -62,7 +62,17 @@
                 TextColor="Black"
                 Clicked="BotaoSalvar"
                 FontSize="20"
-                Margin="10,0,0,10"/>
+                Margin="10,200,150,10"/>
+
+                <Button Text="Lista"
+                        Grid.Row="2"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        Clicked="BotaoLista"
+                        FontSize="20"
+                        Margin="10,200,0,10"/>
     </Grid>
 
 </ContentPage>

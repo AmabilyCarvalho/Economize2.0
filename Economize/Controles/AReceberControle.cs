@@ -37,10 +37,10 @@ public class AReceberControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(AReceber areceber)
+  public virtual void CriarOuAtualizar(AReceber a)
   {
     var collection = liteDB.GetCollection<AReceber>(NomeDaTabela);
-    collection.Upsert(areceber);
+    collection.Upsert(a);
   }
 
   //----------------------------------------------------------------------------
